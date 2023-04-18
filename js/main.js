@@ -1,16 +1,16 @@
-console.log("ciao");
+//console.log("ciao");
 
-const utentiApprovati = ["Lucia","Marco","Beatrice","Federica"];
+const utentiApprovati = ["lucia@libero.it","marco@gmail.com","beatrice@outlook.it","federica@libero.it"];
 
-let x = prompt("inserisci il tuo nome");
-
-for(let num = 0 ; num<utentiApprovati.length; num++ ){
-    let utentiOk = utentiApprovati[num];
-
-    if(x==utentiOk) {
-    prompt ("scrivi la tua mail");
-    alert ("sei dei nostri!")
-    }else if( x !==utentiOk){
-    alert("non sei dei nostri");
+let x = prompt ("inserisci la tua mail");
+console.log(x);
+for (let num = 0 ; num < 5; num ++){
+    const utentiOk = utentiApprovati[num];
+    if (x==utentiOk){
+        console.log(x+ "Sei dentro!");
+        
+    }else if( x!=utentiOk ){
+        console.log("Non puoi accedere!" +x);
+    
     }
 }
