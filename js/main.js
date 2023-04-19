@@ -3,14 +3,24 @@
 const utentiApprovati = ["lucia@libero.it","marco@gmail.com","beatrice@outlook.it","federica@libero.it"];
 
 let x = prompt ("inserisci la tua mail");
-console.log(x);
-for (let num = 0 ; num < 5; num ++){
+
+//console.log(x);
+/*parti falso ,se non trova la corrispondenza con true non fa niente va avanti a cercare fino a che non la trova*/
+let mailAutorizzata=false;
+
+for (let num = 0 ; num < utentiApprovati.length; num ++){
     const utentiOk = utentiApprovati[num];
+
     if (x==utentiOk){
-        console.log(x+ "Sei dentro!");
-        
-    }else if( x!=utentiOk ){
-        console.log("Non puoi accedere!" +x);
+        mailAutorizzata= true;
     
-    }
+    } 
+}
+if (mailAutorizzata==true){
+    
+    console.log(x+ "Sei dentro!");
+    
+}else{
+    console.log("non puoi accedere!" +x);
+
 }
